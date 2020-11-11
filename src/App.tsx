@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Route } from "react-router"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import { Navbar } from "./components/navigation/navbar"
+
+import { Home } from "./pages/home"
+import { Gallery } from "./pages/gallery"
+import { MakeOrder } from "./pages/makeOrder"
+import { Auth } from "./pages/auth"
+
+import "./custom.css"
+import { Orders } from "./components/orders/orders"
+import { Users } from "./components/users/users"
+import { EmailSettings } from "./components/emailSettings"
+
+export const App: React.FC = () => {
+  return <>
+    <div className="container-fluid h-100">
+      <Navbar />
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/MakeOrder" component={MakeOrder} />
+      <Route exact path="/Gallery" component={Gallery} />
+      <Route exact path="/Auth" component={Auth} />
+      <Route exact path="/AdminPanel/Orders" component={Orders} />
+      <Route exact path="/AdminPanel/Users" component={Users} />
+      <Route exact path="/AdminPanel/EmailSettings" component={EmailSettings} />
     </div>
-  );
+  </>
 }
 
-export default App;
+
+
+

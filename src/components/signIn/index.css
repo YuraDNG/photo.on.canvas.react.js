@@ -1,0 +1,23 @@
+.auth-label {
+  font-size: xx-large;
+}
+
+.auth-group {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 10%;
+}
+
+.auth-input {
+  border-radius: 0px;
+}
+
+.auth-icon {
+ margin: 3%;
+ color: black;
+}
+
+.error-span {
+  color: red;
+}

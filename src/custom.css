@@ -1,0 +1,84 @@
+
+.page-link {
+  color:white;
+}
+
+body {
+  color: #f7f7f7 !important;
+}
+
+form {
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 50%);
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 50%);
+}
+
+.nav-link {
+  color: white;
+}
+
+.admin-sidebar {
+  background:rgba(0, 0, 0, 50%);
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+li {
+  padding: 10px;
+}
+
+.navbar-icon {
+  padding: 5px;
+  background: #21201f;
+  color: white;
+}
+
+.table {
+  color: white;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 50%);
+}
+
+.table th, .table td {
+  border-top: none;
+  border-right: solid 2px;
+  vertical-align: middle; 
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.list-img {
+  width: 100px;
+}
+
+.list-img:hover { 
+  transition: 500ms;
+  transform: scale(2.2); 
+}
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.custom-modal-body {
+  padding: 2rem;
+  width: 400px;
+  background: rgb(0, 0, 0);
+}

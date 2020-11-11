@@ -1,0 +1,13 @@
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.delete-icon:hover {
+  box-shadow: 0 2px 20px rgba(241, 3, 3, 1);
+  color: white;
+  background-color: rgb(241 3 3 / 35%);
+  border-radius: 100px;
+  transform: translateY(-1px);
+}
