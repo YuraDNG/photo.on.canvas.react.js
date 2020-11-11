@@ -1,1 +1,1 @@
-React JS application
+React JS app
