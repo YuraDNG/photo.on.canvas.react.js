@@ -47,7 +47,7 @@ export const OrdersList: React.FC = () => {
             <td>{order.phoneNumber}</td>
             <td>{order.address}</td>
             <td>{order.canvas.name}</td>
-            <td><img  alt="..." /></td>
+            <td><img className="list-img" src={"data:image/png;base64," + order.image} alt="..." /></td>
             <td><DeleteIcon onClickHandler={() => deleteOrder(order.id)}/></td>
           </tr>
         )}

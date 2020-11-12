@@ -24,13 +24,7 @@ export interface IOrder {
   phoneNumber: string,
   address: string,
   canvas: ICanvas,
-  image: IImage,
-}
-
-interface IImage {
-  id: string,
-  name: string,
-  path: string,
+  image: string,
 }
 
 export interface IMakeOrder {
