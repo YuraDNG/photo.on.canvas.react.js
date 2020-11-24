@@ -5,23 +5,23 @@ import { SubmitButton } from "../general/submitButton/submitButton"
 import { useInput } from "../../helpers/useInput"
 
 import "./index.css"
-import { emailValidators } from "./loginValidation"
+import { emailValidators, passwordValidators } from "./authValidations"
 
 export const LoginForm: React.FC = () => {
   const dispatch = useDispatch()
   const email = useInput("", emailValidators)
-  const password = useInput("")
+  const password = useInput("", passwordValidators)
 
   const submitHandler = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault()
-    dispatch(loginThunk({email: email.value, password: password.value}))
+    dispatch(loginThunk({ email: email.value, password: password.value }))
   }
 
   return <>
     <form onSubmit={submitHandler}>
       <label className="auth-label">LOG IN</label>
 
-      <div className="form-group auth-group">
+      <div className="form-group form-input-group" style={email.style}>
         <span className="material-icons auth-icon">alternate_email</span>
         <input
           type="email"
@@ -33,11 +33,11 @@ export const LoginForm: React.FC = () => {
         />
       </div>
 
-      {email.isFocused && email.errors.length != 0 &&
-        <span className="error-span">{email.errors}</span>
+      {email.error.length !== 0 &&
+        <span className="error-span">{email.error}</span>
       }
-      
-      <div className="form-group auth-group">
+
+      <div className="form-group form-input-group" style={password.style}>
         <span className="material-icons auth-icon">enhanced_encryption</span>
         <input
           type="password"
@@ -48,6 +48,10 @@ export const LoginForm: React.FC = () => {
           onBlur={e => password.onBlur(e)}
         />
       </div>
+
+      {password.error.length !== 0 &&
+        <span className="error-span">{password.error}</span>
+      }
 
       <div className="form-group form-check">
         <input type="checkbox" className="form-check-input" id="exampleCheck1" />

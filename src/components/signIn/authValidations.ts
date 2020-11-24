@@ -5,3 +5,7 @@ export const emailValidators: ValidType[] = [
   
 ]
 
+export const passwordValidators: ValidType[] = [
+  (value: any) => value.length < 6 ? "Потрібно ввести не менше шести символів" : ""
+  
+]
