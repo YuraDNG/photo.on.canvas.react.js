@@ -6,6 +6,7 @@ import { userReducer } from "./users/reducers"
 import { rolesReducer } from "./roles/reducers"
 import { canvasReducer } from "./canvas/reducers"
 import { emailSettingsReducer } from "./emailSettings/reducers"
+import { galleryReducer } from "./gallery/reducers"
 
 export const rootReducer = combineReducers({
   reg: registrationReducer,
@@ -14,6 +15,7 @@ export const rootReducer = combineReducers({
   user: userReducer,
   roles: rolesReducer,
   canvas: canvasReducer,
+  gallery: galleryReducer,
   emailSettings: emailSettingsReducer,
 })
 
