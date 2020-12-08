@@ -7,6 +7,8 @@ import { rolesReducer } from "./roles/reducers"
 import { canvasReducer } from "./canvas/reducers"
 import { emailSettingsReducer } from "./emailSettings/reducers"
 import { galleryReducer } from "./gallery/reducers"
+import { instagramReducer } from "./instagram/reducers"
+import { instaSettingsReducer } from "./instaSettings/reducers"
 
 export const rootReducer = combineReducers({
   reg: registrationReducer,
@@ -16,7 +18,9 @@ export const rootReducer = combineReducers({
   roles: rolesReducer,
   canvas: canvasReducer,
   gallery: galleryReducer,
+  instagram: instagramReducer,
   emailSettings: emailSettingsReducer,
+  instaSettings: instaSettingsReducer,
 })
 
 export type RootState = ReturnType<typeof rootReducer>
