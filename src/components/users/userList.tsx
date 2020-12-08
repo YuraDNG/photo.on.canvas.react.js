@@ -1,13 +1,14 @@
 import React, { useState } from "react"
-import { Pagination, PaginationType } from "../pagination"
-import { getUsersThunk } from "../../store/users/actions"
-import { useSelector } from "react-redux"
+import { Pagination, PaginationType } from "../general/pagination"
+import { deleteUserThunk, getUsersThunk, showAlertUsers } from "../../store/users/actions"
+import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../store"
 import { RolesControl } from "./rolesControl"
-import { DeleteUser } from "./deleteUser"
 import { IUser, IUserResponse } from "../../store/users/types"
+import { DeleteIcon } from "../general/deleteIcon/deleteIcon"
 
 export const UserList: React.FC = () => {
+  const dispatch = useDispatch()
   const pages: IUserResponse = useSelector((state: RootState) => state.user.usersData)
   const users: IUser[] = pages.data
 
@@ -19,11 +20,21 @@ export const UserList: React.FC = () => {
     hasPrevious: pages.hasPrevious
   }
 
+  const deleteUser = (userId: string) => {
+    let result = window.confirm("Підтвердіть видалення")
+    if (result) {
+      dispatch(deleteUserThunk(userId))
+    } else {
+      dispatch(showAlertUsers("Видалення Відмінено!"))
+    }
+  }
+
+
   const rolePanel = (user: IUser) => {
     return <>
       <div className="dropdown">
         <li className="nav-item active-item">
-          <div className="nav-link link">
+          <div className="link">
             <span className="material-icons">settings</span>
           </div>
         </li>
@@ -41,7 +52,7 @@ export const UserList: React.FC = () => {
         <tr>
           <th scope="col">Імя</th>
           <th scope="col">Email</th>
-          <th>Налаштування ролей</th>
+          <th scope="col">Роль</th>
           <th></th>
         </tr>
       </thead>
@@ -52,7 +63,7 @@ export const UserList: React.FC = () => {
             <td>{user.userName}</td>
             <td>{user.email}</td>
             <td>{rolePanel(user)}</td>
-            <td><DeleteUser {...user} /></td>
+            <td><DeleteIcon onClickHandler={() => deleteUser(user.id)}/></td>
           </tr>
         )}
       </tbody>

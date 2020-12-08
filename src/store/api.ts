@@ -1,26 +1,35 @@
 
 export enum api {
-  getUsers = "https://localhost:5001/api/Account/GetUsers",
-  deleteUser = "https://localhost:5001/api/Account/DeleteUser",
-  registration = "https://localhost:5001/api/Account/Register",
-  confirmEmail = "https://localhost:5001/api/Account/ConfirmEmail",
-  login = "https://localhost:5001/api/Account/Login",
-  logout = "https://localhost:5001/api/Account/Logout",
+  getUsers = "https://photo-on-canvas.azurewebsites.net/api/Account/GetUsers",
+  deleteUser = "https://photo-on-canvas.azurewebsites.net/api/Account/DeleteUser",
+  registration = "https://photo-on-canvas.azurewebsites.net/api/Account/Register",
+  confirmEmail = "https://photo-on-canvas.azurewebsites.net/api/Account/ConfirmEmail",
+  login = "https://photo-on-canvas.azurewebsites.net/api/Account/Login",
+  logout = "https://photo-on-canvas.azurewebsites.net/api/Account/Logout",
 
-  getCanvas = "https://localhost:5001/api/Canvas/GetCanvas",
-  createCanvas = "https://localhost:5001/api/Canvas/CreateCanvas",
-  deleteCanvas = "https://localhost:5001/api/Canvas/DeleteCanvas",
+  galleryAddImage = "https://photo-on-canvas.azurewebsites.net/api/Gallery/AddImage",
+  galleryGetImages = "https://photo-on-canvas.azurewebsites.net/api/Gallery/GetImages",
+  galleryDeleteImage = "https://photo-on-canvas.azurewebsites.net/api/Gallery/DeleteImage",
 
-  getOrders = "https://localhost:5001/api/Order/GetOrders",
-  makeOrder = "https://localhost:5001/api/Order/MakeOrder",
-  deleteOrder = "https://localhost:5001/api/Order/DeleteOrder",
+  getCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/GetCanvas",
+  createCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/CreateCanvas",
+  deleteCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/DeleteCanvas",
+
+  getOrders = "https://photo-on-canvas.azurewebsites.net/api/Order/GetOrders",
+  makeOrder = "https://photo-on-canvas.azurewebsites.net/api/Order/MakeOrder",
+  deleteOrder = "https://photo-on-canvas.azurewebsites.net/api/Order/DeleteOrder",
   
-  createRole = "https://localhost:5001/api/Roles/CreateRole",
-  deleteRole = "https://localhost:5001/api/Roles/DeleteRole",
-  getRoles = "https://localhost:5001/api/Roles/GetRoles",
-  getUserRoles = "https://localhost:5001/api/Roles/GetUserRoles",
-  editUserRoles = "https://localhost:5001/api/Roles/EditUserRoles",
+  createRole = "https://photo-on-canvas.azurewebsites.net/api/Roles/CreateRole",
+  deleteRole = "https://photo-on-canvas.azurewebsites.net/api/Roles/DeleteRole",
+  getRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/GetRoles",
+  getUserRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/GetUserRoles",
+  editUserRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/EditUserRoles",
 
-  getEmailConfig = "https://localhost:5001/api/Configuration/GetEmailConfiguration",
-  SetEmailConfig = "https://localhost:5001/api/Configuration/SetEmailConfiguration",
+  getInstaStories = "https://photo-on-canvas.azurewebsites.net/api/Instagram/GetStories",
+
+  getEmailConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/GetEmailConfiguration",
+  setEmailConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/SetEmailConfiguration",
+
+  getInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/GetInstagramConfiguration",
+  setInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/SetInstagramConfiguration",
 }

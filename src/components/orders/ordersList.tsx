@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Pagination, PaginationType } from "../pagination"
+import { Pagination, PaginationType } from "../general/pagination"
 import { RootState } from "../../store"
 import { deleteOrderThunk, getOrdersThunk, showAlertOrders } from "../../store/order/actions"
 import { IOrder, IOrderResponse } from "../../store/order/types"

@@ -7,11 +7,15 @@ import { Home } from "./pages/home"
 import { Gallery } from "./pages/gallery"
 import { MakeOrder } from "./pages/makeOrder"
 import { Auth } from "./pages/auth"
+import { Settings } from "./pages/settings"
 
-import "./custom.css"
 import { Orders } from "./components/orders/orders"
 import { Users } from "./components/users/users"
-import { EmailSettings } from "./components/emailSettings"
+
+
+import "./custom.css"
+import "./css/form.css"
+import "./css/button.css"
 
 export const App: React.FC = () => {
   return <>
@@ -24,7 +28,7 @@ export const App: React.FC = () => {
       <Route exact path="/Auth" component={Auth} />
       <Route exact path="/AdminPanel/Orders" component={Orders} />
       <Route exact path="/AdminPanel/Users" component={Users} />
-      <Route exact path="/AdminPanel/EmailSettings" component={EmailSettings} />
+      <Route exact path="/AdminPanel/Settings" component={Settings} />
     </div>
   </>
 }

@@ -2,7 +2,7 @@ import Axios, { AxiosRequestConfig } from "axios";
 import { Dispatch } from "redux";
 import { api } from "../api";
 import { PageListQueryType } from "../base/types";
-import { IMakeOrder, IOrderResponse, OrdersActionsTypesEnum } from "./types";
+import { IOrderResponse, OrdersActionsTypesEnum } from "./types";
 
 const showLoaderOrders = (data: boolean) => {
   return {

@@ -46,11 +46,11 @@ export const getEmailConfigThunk = () => {
   }
 }
 
-export const setEmailConfigThunk = (data: IEmailSettings) => {
+export const setEmailConfigThunk = (data: FormData) => {
   return (dispatch: Dispatch<any>) => {
     dispatch(showLoaderRegister(true))
 
-    Axios.post(api.SetEmailConfig, data)
+    Axios.post(api.setEmailConfig, data)
       .then(res => {
         dispatch(showLoaderRegister(false))
       })

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Spinner } from "../general/spinner"
-import { Alert } from "../general/alert"
+import { Alert } from "../general/alert/alert"
 import { RootState } from "../../store"
 import { useDispatch, useSelector } from "react-redux"
 import { OrdersList } from "./ordersList"
@@ -18,11 +18,12 @@ export const Orders: React.FC = () => {
   }, [dispatch])
 
   return <>
+    <Alert text={alert.text} display={alert.showAlert} />
+
     {
       showLoader ? <Spinner /> :
-        alert.showAlert ? <Alert text={alert.text} /> :
-          !orders.length ? <h3>Замовлень немає</h3> :
-            <OrdersList />
+        !orders.length ? <h3>Замовлень немає</h3> :
+          <OrdersList />
     }
   </>
 }

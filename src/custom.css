@@ -1,4 +1,10 @@
 
+::placeholder {
+  font-size: larger;
+  font-weight: 400;
+  color: black;
+}
+
 .page-link {
   color:white;
 }
@@ -24,6 +30,10 @@ form {
   color: white;
 }
 
+.link {
+  text-align: center;
+}
+
 .admin-sidebar {
   background:rgba(0, 0, 0, 50%);
   margin-top: 10px;
@@ -47,9 +57,9 @@ li {
 }
 
 .table th, .table td {
-  border-top: none;
-  border-right: solid 2px;
+  border: 2px solid #2a4a61;
   vertical-align: middle; 
+  padding: 0.50rem;
 }
 
 .pagination {
@@ -58,6 +68,7 @@ li {
 
 .list-img {
   width: 100px;
+  height: 100px;
 }
 
 .list-img:hover { 
@@ -65,20 +76,4 @@ li {
   transform: scale(2.2); 
 }
 
-.custom-modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  padding-top: 5rem;
-}
 
-.custom-modal-body {
-  padding: 2rem;
-  width: 400px;
-  background: rgb(0, 0, 0);
-}

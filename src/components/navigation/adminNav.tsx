@@ -21,9 +21,9 @@ export const AdminNav: React.FC = () => {
       </li>
 
       <li className="admin-li">
-        <NavLink className="nav-link" to="/AdminPanel/EmailSettings/" exact>
+        <NavLink className="nav-link" to="/AdminPanel/Settings/" exact>
           <span className="material-icons">settings</span>
-          Налаштування Email
+          Налаштування
         </NavLink>
       </li>
     </ul>

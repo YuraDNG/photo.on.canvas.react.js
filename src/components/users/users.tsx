@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../store"
 import { Spinner } from "../general/spinner"
-import { Alert } from "../general/alert"
+import { Alert } from "../general/alert/alert"
 import { UserList } from "./userList"
 import { getUsersThunk } from "../../store/users/actions"
 import { getRolesThunk } from "../../store/roles/actions"
@@ -19,9 +19,10 @@ export const Users: React.FC = () => {
   }, [dispatch])
   
   return <>
+    <Alert text={alert.text} display={alert.showAlert}/>
+
     {
       showLoader ? <Spinner /> :
-        alert.showAlert ? <Alert text={alert.text} /> :
           !users.length ? <h3>Немає зареєстрованих користувачів</h3> :
             <UserList />
     }

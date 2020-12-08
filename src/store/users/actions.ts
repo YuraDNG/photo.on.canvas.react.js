@@ -1,4 +1,4 @@
-import Axios from "axios";
+import Axios, { AxiosRequestConfig } from "axios";
 import { Dispatch } from "redux";
 import { api } from "../api";
 import { PageListQueryType } from "../base/types";
@@ -11,7 +11,7 @@ const showLoaderUsers = (data: boolean) => {
   }
 }
 
-const showAlertUsers = (data: string) => {
+export const showAlertUsers = (data: string) => {
   return (dispatch: Dispatch) => {
     dispatch({
       type: UserActionsTypesEnum.showAlert,
@@ -52,7 +52,8 @@ export const deleteUserThunk = (userId: string) => {
   return (dispatch: Dispatch<any>) => {
     dispatch(showLoaderUsers(true))
 
-    Axios.post(api.deleteUser, userId)
+    let headers: AxiosRequestConfig = { headers: { 'Content-Type': 'application/json-patch+json' } }
+    Axios.post(api.deleteUser, userId, headers)
       .then(res => {
         dispatch(showLoaderUsers(false))
       })

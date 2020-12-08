@@ -47,12 +47,12 @@ export const Navbar: React.FC = () => {
             </NavLink>
           </li>
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink className="nav-link" to="/Gallery" exact>
               <span className="material-icons">photo_library</span>
               Галерея
             </NavLink>
-          </li>
+          </li> */}
 
           <li className="nav-item">
             <NavLink className="nav-link" to="/Auth" exact>

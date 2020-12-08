@@ -9,6 +9,10 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
   const [wasFocused, setFocused] = useState(false)
   const [error, setError] = useState("")
   const [style, setStyle] = useState({})
+  
+  const set = (data: any) => {
+    setValue(data)
+  }
 
   useEffect(() => {
     if (wasFocused) {
@@ -25,9 +29,11 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
         borderWidth: "2px",
         borderStyle: "solid"
       })
-    } else {
+    } else if (error.length == 0 && wasFocused){
       setStyle({
-        borderColor: "white"
+        borderColor: "#0dde0d",
+        borderWidth: "2px",
+        borderStyle: "solid"
       })
     }
   }, [error])
@@ -42,6 +48,7 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
 
   return {
     value,
+    set,
     error,
     onChange,
     onBlur,
