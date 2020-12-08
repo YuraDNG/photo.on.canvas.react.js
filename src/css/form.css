@@ -1,0 +1,6 @@
+.form-input-group {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 13% 9% 0% 9%;
+}

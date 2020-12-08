@@ -1,0 +1,13 @@
+.review-img {
+  width: 26vh;
+  height: 26vh;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3ms;
+  border: solid black 2px;
+}
+
+.review-img:hover {
+  border: none;
+}

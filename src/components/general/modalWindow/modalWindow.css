@@ -1,0 +1,29 @@
+.custom-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.custom-modal-body {
+  padding: 2rem;
+  height: fit-content;
+  background: rgb(0, 0, 0);
+}
+
+.close-icon {
+  position: absolute;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  transition: .3ms;
+  color: black;
+}

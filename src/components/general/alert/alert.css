@@ -1,0 +1,6 @@
+.red-alert {
+  color: #ffffff;
+  background-color: rgb(255 0 0 / 50%);
+  border-color: #c6c8ca;
+  margin-top: 10px; 
+}

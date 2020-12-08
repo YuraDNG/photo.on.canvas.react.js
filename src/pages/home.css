@@ -1,0 +1,10 @@
+.block {
+  margin: 10px 0px 10px 0px;
+  background: rgba(0, 0, 0, 50%);
+}
+
+.text-block {
+  height: 50vh;
+  background-image: url(../resources/img/mona-liza.jpg);
+  background-size: cover;
+}

@@ -1,0 +1,18 @@
+.add-button {
+  background: none;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.add-icon {
+  color: white;
+  font-size: 36px;
+  margin: 5px;
+}
+
+.add-button:hover:enabled .add-icon{
+  color:  #487dd6;
+  border-radius: 100px;
+  transform: translateY(-1px);
+}
