@@ -36,10 +36,11 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
         borderStyle: "solid"
       })
     }
-  }, [error])
+  }, [error, value])
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setValue(event.target.value)
+    setFocused(true) 
   }
 
   const onBlur = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
