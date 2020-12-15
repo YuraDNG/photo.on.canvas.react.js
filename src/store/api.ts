@@ -33,3 +33,5 @@ export enum api {
   getInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/GetInstagramConfiguration",
   setInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/SetInstagramConfiguration",
 }
+
+// https://photo-on-canvas.azurewebsites.net

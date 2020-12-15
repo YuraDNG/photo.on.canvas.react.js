@@ -36,8 +36,16 @@ export const getUsersThunk = (data: PageListQueryType) => {
   return (dispatch: Dispatch<any>) => {
     dispatch(showLoaderUsers(true))
 
-    Axios.get(api.getUsers, { params: { pageNumber: data.pageNumber, pageSize: data.pageSize } })
+    let config: AxiosRequestConfig = { headers: { 
+      withCredentials: true,
+    }, params: { 
+      pageNumber: data.pageNumber, 
+      pageSize: data.pageSize 
+    }}
+
+    Axios.get(api.getUsers, config)
       .then(res => {
+        console.log(res)
         dispatch(fetchUsers(res.data))
         dispatch(showLoaderUsers(false))
       })

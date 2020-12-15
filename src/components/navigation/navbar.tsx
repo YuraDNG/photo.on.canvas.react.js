@@ -54,14 +54,16 @@ export const Navbar: React.FC = () => {
             </NavLink>
           </li> */}
 
+          {adminPanelLink()}
+        </ul>
+
+        <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/Auth" exact>
               <span className="material-icons">login</span>
               Увійти
             </NavLink>
           </li>
-
-          {adminPanelLink()}
         </ul>
       </div>
     </nav>
