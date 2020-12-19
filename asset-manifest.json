@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/photo.on.canvas.react.js/static/css/main.170ef8c1.chunk.css",
+    "main.js": "/photo.on.canvas.react.js/static/js/main.6b20b2ec.chunk.js",
+    "main.js.map": "/photo.on.canvas.react.js/static/js/main.6b20b2ec.chunk.js.map",
+    "runtime-main.js": "/photo.on.canvas.react.js/static/js/runtime-main.34869c67.js",
+    "runtime-main.js.map": "/photo.on.canvas.react.js/static/js/runtime-main.34869c67.js.map",
+    "static/css/2.43b2b750.chunk.css": "/photo.on.canvas.react.js/static/css/2.43b2b750.chunk.css",
+    "static/js/2.69a18ad3.chunk.js": "/photo.on.canvas.react.js/static/js/2.69a18ad3.chunk.js",
+    "static/js/2.69a18ad3.chunk.js.map": "/photo.on.canvas.react.js/static/js/2.69a18ad3.chunk.js.map",
+    "index.html": "/photo.on.canvas.react.js/index.html",
+    "static/css/2.43b2b750.chunk.css.map": "/photo.on.canvas.react.js/static/css/2.43b2b750.chunk.css.map",
+    "static/css/main.170ef8c1.chunk.css.map": "/photo.on.canvas.react.js/static/css/main.170ef8c1.chunk.css.map",
+    "static/js/2.69a18ad3.chunk.js.LICENSE.txt": "/photo.on.canvas.react.js/static/js/2.69a18ad3.chunk.js.LICENSE.txt",
+    "static/media/home.css": "/photo.on.canvas.react.js/static/media/mona-liza.057524bf.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34869c67.js",
+    "static/css/2.43b2b750.chunk.css",
+    "static/js/2.69a18ad3.chunk.js",
+    "static/css/main.170ef8c1.chunk.css",
+    "static/js/main.6b20b2ec.chunk.js"
+  ]
+}
