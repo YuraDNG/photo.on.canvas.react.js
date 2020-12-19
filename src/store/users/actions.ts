@@ -38,6 +38,7 @@ export const getUsersThunk = (data: PageListQueryType) => {
 
     let config: AxiosRequestConfig = { headers: { 
       withCredentials: true,
+      "Authorization": `Bearer ${localStorage.getItem("token")}`
     }, params: { 
       pageNumber: data.pageNumber, 
       pageSize: data.pageSize 

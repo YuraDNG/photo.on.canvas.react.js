@@ -1,5 +1,4 @@
 import { combineReducers } from "redux"
-import { loginReducer } from "./login/reducers"
 import { ordersReducer } from "./order/reducers"
 import { registrationReducer } from "./registration/reducers"
 import { userReducer } from "./users/reducers"
@@ -9,10 +8,11 @@ import { emailSettingsReducer } from "./emailSettings/reducers"
 import { galleryReducer } from "./gallery/reducers"
 import { instagramReducer } from "./instagram/reducers"
 import { instaSettingsReducer } from "./instaSettings/reducers"
+import { authReducer } from "./auth/reducers"
 
 export const rootReducer = combineReducers({
   reg: registrationReducer,
-  login: loginReducer,
+  auth: authReducer,
   order: ordersReducer,
   user: userReducer,
   roles: rolesReducer,

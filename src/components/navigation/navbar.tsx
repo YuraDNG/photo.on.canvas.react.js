@@ -1,13 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { RootState } from "../../store";
 import { AdminNav } from "./adminNav"
 
 import "./navbar.css"
 
 export const Navbar: React.FC = () => {
+  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated)
 
   const adminPanelLink = () => {
-    if (true) {
+    if (isAuthenticated) {
       return <>
         <div className="dropdown">
           <li className="nav-item active-item">
@@ -21,6 +24,32 @@ export const Navbar: React.FC = () => {
             <AdminNav />
           </div>
         </div>
+      </>
+    }
+  }
+
+  const loginPanelLink = () => {
+    if (isAuthenticated) {
+      return <>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/Auth" exact>
+              <span className="material-icons">logout</span>
+              Вийти
+            </NavLink>
+          </li>
+        </ul>
+      </>
+    } else {
+      return <>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/Auth" exact>
+              <span className="material-icons">login</span>
+              Увійти
+            </NavLink>
+          </li>
+        </ul>
       </>
     }
   }
@@ -57,14 +86,7 @@ export const Navbar: React.FC = () => {
           {adminPanelLink()}
         </ul>
 
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/Auth" exact>
-              <span className="material-icons">login</span>
-              Увійти
-            </NavLink>
-          </li>
-        </ul>
+        {loginPanelLink()}
       </div>
     </nav>
   </>

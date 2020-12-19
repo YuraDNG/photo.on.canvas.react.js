@@ -1,13 +1,16 @@
 import React from "react"
-import { useDispatch } from "react-redux"
-import { loginThunk } from "../../store/login/actions"
+import { useDispatch, useSelector } from "react-redux"
+import { loginThunk } from "../../store/auth/actions"
 import { SubmitButton } from "../general/submitButton/submitButton"
 import { useInput } from "../../helpers/useInput"
 
 import "./index.css"
 import { emailValidators, passwordValidators } from "./authValidations"
+import { Redirect } from "react-router"
+import { RootState } from "../../store"
 
 export const LoginForm: React.FC = () => {
+  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated)
   const dispatch = useDispatch()
   const email = useInput("", emailValidators)
   const password = useInput("", passwordValidators)
@@ -15,6 +18,10 @@ export const LoginForm: React.FC = () => {
   const submitHandler = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault()
     dispatch(loginThunk({ email: email.value, password: password.value }))
+  }
+
+  if (isAuthenticated) {
+    return <Redirect to="/" />
   }
 
   return <>

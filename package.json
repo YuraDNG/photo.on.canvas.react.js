@@ -1,4 +1,5 @@
 {
+  "homepage": "http://YuraDNG.github.io/photo.on.canvas.react.js",
   "name": "web",
   "version": "0.1.0",
   "private": false,
@@ -36,12 +37,15 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^3.1.0",
     "typescript": "^3.9.7"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
