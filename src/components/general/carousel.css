@@ -1,0 +1,14 @@
+.carousel {
+  width: -webkit-fill-available;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: auto;
+}
+
+.carousel-inner {
+  width: max-content;
+  margin: auto;
+}
+
+

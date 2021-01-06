@@ -1,3 +1,7 @@
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 ::placeholder {
   font-size: larger;
@@ -20,6 +24,10 @@ form {
   width: 300px;
   background-color: rgba(0, 0, 0, 50%);
   text-align: center;
+}
+
+.form-control {
+  border-radius: 0;
 }
 
 .navbar {

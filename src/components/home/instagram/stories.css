@@ -1,0 +1,15 @@
+.stories {
+  width: 38vh;
+}
+
+.story-img {
+  width: 50vh;
+  height: 70vh;
+  margin: 10px;
+  cursor: pointer;
+  transition: .3ms;
+}
+
+.story-img:hover {
+  border: none;
+}

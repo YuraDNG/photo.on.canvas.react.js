@@ -38,7 +38,7 @@ export const getUsersThunk = (data: PageListQueryType) => {
 
     let config: AxiosRequestConfig = { headers: { 
       withCredentials: true,
-      "Authorization": `Bearer ${localStorage.getItem("token")}`
+      "Authorization": `Bearer ${localStorage.getItem("poc-token")}`
     }, params: { 
       pageNumber: data.pageNumber, 
       pageSize: data.pageSize 
@@ -61,7 +61,10 @@ export const deleteUserThunk = (userId: string) => {
   return (dispatch: Dispatch<any>) => {
     dispatch(showLoaderUsers(true))
 
-    let headers: AxiosRequestConfig = { headers: { 'Content-Type': 'application/json-patch+json' } }
+    let headers: AxiosRequestConfig = { headers: { 
+      'Content-Type': 'application/json-patch+json',
+      "Authorization": `Bearer ${localStorage.getItem("poc-token")}` 
+    } }
     Axios.post(api.deleteUser, userId, headers)
       .then(res => {
         dispatch(showLoaderUsers(false))

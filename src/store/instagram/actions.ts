@@ -23,27 +23,41 @@ const showAlertInsta = (data: string) => {
   }
 }
 
-const fetchInstaStories = (data: IInstaStory[]) => {
+const fetchStories = (data: IInstaStory[]) => {
   return {
-    type: InstaActionsTypesEnum.fetchInstaStories,
+    type: InstaActionsTypesEnum.fetchStories,
     payload: data
   }
 }
 
-export const getInstaStoriesThunk = (storiesName: string) => {
+export const getStoriesThunk = () => {
   return (dispatch: Dispatch<any>) => {
     dispatch(showLoaderInsta(true))
 
-    Axios.get(api.getInstaStories, { params: { storyName: storiesName } })
+    Axios.post(api.getInstaStories)
       .then(res => {
-        dispatch(fetchInstaStories(res.data))
+        dispatch(fetchStories(res.data))
         dispatch(showLoaderInsta(false))
-
       })
       .catch(error => {
         dispatch(showLoaderInsta(false))
         dispatch(showAlertInsta("Помилка сервера!"))
         console.log(error)
+      })
+  }
+}
+
+export const updateStoriesThunk = () => {
+  return (dispatch: Dispatch<any>) => {
+    dispatch(showLoaderInsta(true))
+
+    Axios.get(api.updateInsatStories)
+      .then(res => {
+        dispatch(showLoaderInsta(false))
+      })
+      .catch(error => {
+        dispatch(showLoaderInsta(false))
+        dispatch(showAlertInsta("Помилка сервера!"))
       })
   }
 }

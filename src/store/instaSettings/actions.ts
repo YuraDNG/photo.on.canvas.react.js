@@ -1,6 +1,7 @@
 import Axios from "axios"
 import { Dispatch } from "redux"
 import { api } from "../api"
+import { updateStoriesThunk } from "../instagram/actions"
 import { IInstaSettings, InstaSettingsActionsTypesEnum } from "./types"
 
 const showLoaderRegister = (data: boolean) => {
@@ -53,6 +54,7 @@ export const setInstaConfigThunk = (data: FormData) => {
     Axios.post(api.setInstaConfig, data)
       .then(res => {
         dispatch(showLoaderRegister(false))
+        dispatch(updateStoriesThunk())
       })
       .catch(err => {
         dispatch(showLoaderRegister(false))

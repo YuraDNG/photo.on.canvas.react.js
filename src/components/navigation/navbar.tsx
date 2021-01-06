@@ -1,22 +1,30 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { RootState } from "../../store";
+import { isAdminThunk, isAuthenticatedThunk, logoutThunk } from "../../store/auth/actions";
 import { AdminNav } from "./adminNav"
 
 import "./navbar.css"
 
 export const Navbar: React.FC = () => {
+  const dispatch = useDispatch()
   const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated)
+  const isAdmin = useSelector((state: RootState) => state.auth.isAdmin)
+
+  useEffect(() => {
+    dispatch(isAdminThunk())
+    dispatch(isAuthenticatedThunk())
+  }, [dispatch])
 
   const adminPanelLink = () => {
-    if (isAuthenticated) {
+    if (isAdmin) {
       return <>
         <div className="dropdown">
           <li className="nav-item active-item">
             <div className="nav-link link">
               <span className="material-icons">admin_panel_settings</span>
-              Панель Адміністратора
+              Адмін Панель
             </div>
           </li>
 
@@ -33,7 +41,7 @@ export const Navbar: React.FC = () => {
       return <>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/Auth" exact>
+            <NavLink className="nav-link" to="/" exact onClick={() => dispatch(logoutThunk())}>
               <span className="material-icons">logout</span>
               Вийти
             </NavLink>
@@ -55,7 +63,7 @@ export const Navbar: React.FC = () => {
   }
 
   return <>
-    <nav className="nav navbar-expand-lg">
+    <nav className="nav navbar-expand">
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-icon">Menu</span>
       </button>

@@ -16,9 +16,12 @@ import { Users } from "./components/users/users"
 import "./custom.css"
 import "./css/form.css"
 import "./css/button.css"
+import { Preloader } from "./components/general/preloader/preloader"
 
 export const App: React.FC = () => {
   return <>
+    <Preloader />
+    
     <div className="container-fluid h-100">
       <Navbar />
 

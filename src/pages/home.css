@@ -1,10 +1,19 @@
+.home {
+  background-image: url(../resources/img/mona-liza.jpg) !important;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
 .block {
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
   background: rgba(0, 0, 0, 50%);
+  justify-content: center;
+  text-align: center;
 }
 
 .text-block {
   height: 50vh;
-  background-image: url(../resources/img/mona-liza.jpg);
+  /* background-image: url(../resources/img/mona-liza.jpg); */
   background-size: cover;
 }

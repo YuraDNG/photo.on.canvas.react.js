@@ -33,6 +33,7 @@ export interface IMakeOrder {
   address: string,
   canvasId: string,
   image: File,
+  info: string,
 }
 
 export enum makeOrderEnum {
@@ -41,6 +42,7 @@ export enum makeOrderEnum {
   address = "address",
   canvasId = "canvasId",
   image = "image",
+  info = "info",
 } 
 
 export interface IOrdersState extends IState{

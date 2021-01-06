@@ -9,6 +9,7 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
   const [wasFocused, setFocused] = useState(false)
   const [error, setError] = useState("")
   const [style, setStyle] = useState({})
+  const disabledButton = error.length !== 0 || !wasFocused ? true : false
   
   const set = (data: any) => {
     setValue(data)
@@ -38,12 +39,12 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
     }
   }, [error, value])
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setValue(event.target.value)
     setFocused(true) 
   }
 
-  const onBlur = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const onBlur = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFocused(true) 
   }
 
@@ -53,6 +54,7 @@ export const useInput = (initValue: any, validations?: ValidType[] ) => {
     error,
     onChange,
     onBlur,
-    style
+    style,
+    disabledButton
   }
 }

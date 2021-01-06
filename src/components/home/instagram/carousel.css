@@ -1,0 +1,16 @@
+.carousel {
+  width: -webkit-fill-available;
+  background-color: rgb(0 0 0 / 50%);
+  margin: 10px;
+}
+
+.carousel-inner {
+  width: max-content;
+  margin: auto;
+}
+
+.carousel-label {
+  font-family: cursive;
+}
+
+

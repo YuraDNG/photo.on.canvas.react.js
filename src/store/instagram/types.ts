@@ -4,18 +4,20 @@ export enum InstaActionsTypesEnum {
   showLoader = "INSTAGRAM_SHOW_LOADER",
   showAlert = "INSTAGRAM_SHOW_ALERT",
   hideAlert = "INSTAGRAM_HIDE_ALERT",
-  fetchInstaStories = "FETCH_INSTAGRAM_STORIES",
-}
-
-export interface IInstaResponse {
-  instaStories: IInstaStory[]
+  fetchStories = "FETCH_STORIES",
+  fetchReviews = "FETCH_REVIEWS",
+  fetchVisualizations = "FETCH_VISUALIZATIONS"
 }
 
 export interface IInstaStory {
-  imgURL: string,
-  videoURL: string
+  id: string,
+  category: string,
+  imageUri: string,
+  videoUri: string
 }
 
 export interface IInstaState extends IState{
-  instaData: IInstaResponse
+  reviews: IInstaStory[],
+  visualizations: IInstaStory[],
+  stories: IInstaStory[]
 }

@@ -1,37 +1,41 @@
 
 export enum api {
-  getUsers = "https://photo-on-canvas.azurewebsites.net/api/Account/GetUsers",
-  deleteUser = "https://photo-on-canvas.azurewebsites.net/api/Account/DeleteUser",
-  registration = "https://photo-on-canvas.azurewebsites.net/api/Account/Register",
-  confirmEmail = "https://photo-on-canvas.azurewebsites.net/api/Account/ConfirmEmail",
-  login = "https://photo-on-canvas.azurewebsites.net/api/Account/Login",
-  logout = "https://photo-on-canvas.azurewebsites.net/api/Account/Logout",
+  getUsers = "http://localhost:5000/api/Account/GetUsers",
+  deleteUser = "http://localhost:5000/api/Account/DeleteUser",
+  registration = "http://localhost:5000/api/Account/Register",
+  confirmEmail = "http://localhost:5000/api/Account/ConfirmEmail",
+  login = "http://localhost:5000/api/Account/Login",
+  logout = "http://localhost:5000/api/Account/Logout",
+  getUserData = "http://localhost:5000/api/Account/GetUserData",
+  isAdmin = "http://localhost:5000/api/Account/IsAdmin",
+  isAuthenticated = "http://localhost:5000/api/Account/isAuthenticated",
 
-  galleryAddImage = "https://photo-on-canvas.azurewebsites.net/api/Gallery/AddImage",
-  galleryGetImages = "https://photo-on-canvas.azurewebsites.net/api/Gallery/GetImages",
-  galleryDeleteImage = "https://photo-on-canvas.azurewebsites.net/api/Gallery/DeleteImage",
+  galleryAddImage = "http://localhost:5000/api/Gallery/AddImage",
+  galleryGetImages = "http://localhost:5000/api/Gallery/GetImages",
+  galleryDeleteImage = "http://localhost:5000/api/Gallery/DeleteImage",
 
-  getCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/GetCanvas",
-  createCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/CreateCanvas",
-  deleteCanvas = "https://photo-on-canvas.azurewebsites.net/api/Canvas/DeleteCanvas",
+  getCanvas = "http://localhost:5000/api/Canvas/GetCanvas",
+  createCanvas = "http://localhost:5000/api/Canvas/CreateCanvas",
+  deleteCanvas = "http://localhost:5000/api/Canvas/DeleteCanvas",
 
-  getOrders = "https://photo-on-canvas.azurewebsites.net/api/Order/GetOrders",
-  makeOrder = "https://photo-on-canvas.azurewebsites.net/api/Order/MakeOrder",
-  deleteOrder = "https://photo-on-canvas.azurewebsites.net/api/Order/DeleteOrder",
+  getOrders = "http://localhost:5000/api/Order/GetOrders",
+  makeOrder = "http://localhost:5000/api/Order/MakeOrder",
+  deleteOrder = "http://localhost:5000/api/Order/DeleteOrder",
   
-  createRole = "https://photo-on-canvas.azurewebsites.net/api/Roles/CreateRole",
-  deleteRole = "https://photo-on-canvas.azurewebsites.net/api/Roles/DeleteRole",
-  getRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/GetRoles",
-  getUserRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/GetUserRoles",
-  editUserRoles = "https://photo-on-canvas.azurewebsites.net/api/Roles/EditUserRoles",
+  createRole = "http://localhost:5000/api/Roles/CreateRole",
+  deleteRole = "http://localhost:5000/api/Roles/DeleteRole",
+  getRoles = "http://localhost:5000/api/Roles/GetRoles",
+  getUserRoles = "http://localhost:5000/api/Roles/GetUserRoles",
+  editUserRoles = "http://localhost:5000/api/Roles/EditUserRoles",
 
-  getInstaStories = "https://photo-on-canvas.azurewebsites.net/api/Instagram/GetStories",
+  getInstaStories = "http://localhost:5000/api/Instagram/GetStories",
+  updateInsatStories = "http://localhost:5000/api/Instagram/UpdateDbInstaDataAsync",
 
-  getEmailConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/GetEmailConfiguration",
-  setEmailConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/SetEmailConfiguration",
+  getEmailConfig = "http://localhost:5000/api/Configuration/GetEmailConfiguration",
+  setEmailConfig = "http://localhost:5000/api/Configuration/SetEmailConfiguration",
 
-  getInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/GetInstagramConfiguration",
-  setInstaConfig = "https://photo-on-canvas.azurewebsites.net/api/Configuration/SetInstagramConfiguration",
+  getInstaConfig = "http://localhost:5000/api/Configuration/GetInstagramConfiguration",
+  setInstaConfig = "http://localhost:5000/api/Configuration/SetInstagramConfiguration",
 }
 
 // https://photo-on-canvas.azurewebsites.net

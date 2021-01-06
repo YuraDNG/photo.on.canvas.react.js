@@ -8,10 +8,12 @@
 
 .nav-link {
   display: flex;
+  align-items: center;
+  text-align: start;
 }
 
 .nav {
-  background-color: rgba(0,0,0, 50%);
+  background-color: rgba(0,0,0, 70%);
 }
 
 .dropdown-content {

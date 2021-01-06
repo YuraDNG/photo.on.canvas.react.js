@@ -7,11 +7,10 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  padding-top: 2rem;
+  z-index: 2;
 }
 
 .custom-modal-body {
-  padding: 2rem;
   height: fit-content;
   background: rgb(0, 0, 0);
 }

@@ -34,7 +34,7 @@ export const RegistrationForm: React.FC = () => {
           placeholder="Введіть свій Email"
           value={email.value}
           onChange={e => email.onChange(e)}
-          onBlur={e => email.onBlur(e)}
+          onFocus={e => email.onBlur(e)}
         />
       </div>
 
@@ -50,7 +50,7 @@ export const RegistrationForm: React.FC = () => {
           placeholder="Введіть пароль"
           value={password.value}
           onChange={e => password.onChange(e)}
-          onBlur={e => password.onBlur(e)}
+          onFocus={e => password.onBlur(e)}
         />
       </div>
 
@@ -66,7 +66,7 @@ export const RegistrationForm: React.FC = () => {
           placeholder="Підтвердіть пароль"
           value={confirmPassword.value}
           onChange={e => confirmPassword.onChange(e)}
-          onBlur={e => confirmPassword.onBlur(e)}
+          onFocus={e => confirmPassword.onBlur(e)}
         />
       </div>
 
@@ -74,7 +74,14 @@ export const RegistrationForm: React.FC = () => {
         <span className="error-span">{confirmPassword.error}</span>
       }
 
-      <SubmitButton text="Зареєструватись"/>
+      <SubmitButton 
+        text="Зареєструватись"
+        disabled={
+          email.disabledButton ||
+          password.disabledButton ||
+          confirmPassword.disabledButton
+        }
+      />
     </form>
   </>
 }

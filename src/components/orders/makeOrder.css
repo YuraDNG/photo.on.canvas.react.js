@@ -1,0 +1,12 @@
+.makeorder-form {
+  margin: 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 50%);
+  text-align: center;
+  width: auto;
+}
+
+.order-img {
+  height: 41vh;
+  max-width: 66vh;
+}

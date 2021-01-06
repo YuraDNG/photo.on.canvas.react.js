@@ -36,11 +36,11 @@ export const LoginForm: React.FC = () => {
           placeholder="Введіть свій Email"
           value={email.value}
           onChange={e => email.onChange(e)}
-          onBlur={e => email.onBlur(e)}
+          onFocus={e => email.onBlur(e)}
         />
       </div>
 
-      {email.error.length !== 0 &&
+      {email.error.length !== 0 && 
         <span className="error-span">{email.error}</span>
       }
 
@@ -52,7 +52,7 @@ export const LoginForm: React.FC = () => {
           placeholder="Введіть пароль"
           value={password.value}
           onChange={e => password.onChange(e)}
-          onBlur={e => password.onBlur(e)}
+          onFocus={e => password.onBlur(e)}
         />
       </div>
 
@@ -66,7 +66,13 @@ export const LoginForm: React.FC = () => {
       </div>
 
       <>
-        <SubmitButton text="Увійти" />
+        <SubmitButton 
+          text="Увійти" 
+          disabled={
+            email.disabledButton ||
+            password.disabledButton 
+          }
+        />
       </>
 
     </form>
