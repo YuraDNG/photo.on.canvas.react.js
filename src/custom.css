@@ -28,6 +28,8 @@ form {
 
 .form-control {
   border-radius: 0;
+  background:rgb(0, 0, 0);
+  color: #b7bfc7;
 }
 
 .navbar {

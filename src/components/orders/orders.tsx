@@ -22,7 +22,7 @@ export const Orders: React.FC = () => {
 
     {
       showLoader ? <Spinner /> :
-        !orders.length ? <h3>Замовлень немає</h3> :
+        !orders.length ? <h3 style={{textAlign: "center"}}>Замовлень немає</h3> :
           <OrdersList />
     }
   </>

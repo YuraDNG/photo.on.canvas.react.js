@@ -23,7 +23,7 @@ export const Users: React.FC = () => {
 
     {
       showLoader ? <Spinner /> :
-          !users.length ? <h3>Немає зареєстрованих користувачів</h3> :
+          !users.length ? <h3 style={{textAlign: "center"}}>Немає зареєстрованих користувачів</h3> :
             <UserList />
     }
   </>
